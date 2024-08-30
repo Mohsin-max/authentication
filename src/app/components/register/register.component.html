@@ -1,0 +1,57 @@
+<div class="container">
+
+    <div class="row d-flex flex-column justify-content-center" style="height: 100vh;">
+
+        <div class="column mx-auto p-4 rounded-2" style="width: 35%; box-shadow: 2px 2px 10px 3px rgb(189, 188, 188);">
+
+            <form [formGroup]="registerForm" (ngSubmit)="registerFormSubmit()"
+                class="d-flex flex-column justify-content-center">
+
+                <h2 class="mb-4 text-center">Register</h2>
+
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Type Your Username"
+                        formControlName="username">
+                    <div
+                        *ngIf="registerForm.controls['username'].invalid && (registerForm.controls['username'].touched || registerForm.controls['username'].dirty)">
+                        <span *ngIf="registerForm.controls['username'].errors?.['required']">*Username is
+                            required</span>
+                        <span *ngIf="registerForm.controls['username'].errors?.['minlength']">*Username must be 4
+                            characters long</span><br>
+                        <span *ngIf="registerForm.controls['username'].errors?.['pattern']">*Invalid username</span>
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Type Your Email" formControlName="email">
+                    <div
+                        *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)">
+                        <span *ngIf="registerForm.controls['email'].errors?.['required']">*Email is required</span>
+                        <span *ngIf="registerForm.controls['email'].errors?.['email']">*Email should be valid</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Type Your Password" formControlName="password">
+
+                    <div
+                        *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)">
+                        <span *ngIf="registerForm.controls['password'].errors?.['required']">*Password is
+                            required</span>
+                        <span *ngIf="registerForm.controls['password'].errors?.['minlength']">*Password must be 4
+                            characters long</span>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+
+                <p class="mt-3">Already a member? <a routerLink="/login">Login</a></p>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

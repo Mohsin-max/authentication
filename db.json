@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "29a1",
+      "username": "mohsin",
+      "email": "mohsin@gmail.com",
+      "password": "21212"
+    },
+    {
+      "id": "75bf",
+      "username": "hamza123",
+      "email": "hamza@gmail.com",
+      "password": "123321"
+    },
+    {
+      "id": "3979",
+      "username": "nimra",
+      "email": "nimra@gmail.com",
+      "password": "3215"
+    },
+    {
+      "id": "0205",
+      "username": "fahad",
+      "email": "fahad@gmail.com",
+      "password": "2121"
+    },
+    {
+      "id": "9403",
+      "username": "mohsin",
+      "email": "wssww@g",
+      "password": "sxsxsx"
+    },
+    {
+      "id": "6e36",
+      "username": "aaaa",
+      "email": "mohsin@gmail.com",
+      "password": "00000"
+    },
+    {
+      "id": "8cf7",
+      "username": "laiba",
+      "email": "laiba@gmail.com",
+      "password": "456456"
+    }
+  ]
+}
